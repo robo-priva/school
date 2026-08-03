@@ -1,0 +1,67 @@
+body{
+    background: linear-gradient(135deg, rgba(0,0,0,0.7), pink, brown);
+}
+.already{
+    text-align: center;
+}
+.already h1{
+    color: blue;
+}
+.form-sect{
+    text-align: center;
+}
+.form-sect li{
+    text-align: center;
+    align-items: center;
+}
+.form-sect h1{
+    color: blue;
+}
+.admis{
+    border-radius: 8px;
+    margin-top: 0px;
+    background: #222;
+    color: gold;
+    text-align: center;
+}
+.admin-tit{
+    color: white;
+}
+.admis button{
+    padding: 10px;
+    border-radius: 12px;
+    color:aqua;
+    font-weight: bold;
+    background: black;
+    margin-bottom: 20px;
+}
+.admis button:hover{
+    transform: translateY(10px);
+    background: brown;
+}
+
+#form button{
+    color: blue;
+    margin-top: 30px;
+    background: white;
+    border-radius: 10px;
+    margin-left:35%;
+    margin-right: 35%;
+    width: 20%;
+    padding: 8px;
+}
+#form button:hover{
+    background: greenyellow;
+}
+footer{
+    background: #222;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+.more div{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
