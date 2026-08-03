@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admissions 2026/2027</title>
+
+<link rel="icon" href="images/LOGO.png" type="image/png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f5f7fa;
+line-height:1.6;
+}
+
+/* Hero */
+
+.admis{
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(images/logo.png);
+background-size:cover;
+background-position:center;
+min-height: 150vh;
+padding:80px 20px;
+text-align:center;
+color:white;
+}
+
+.admin-tit{
+font-size:40px;
+margin-bottom:15px;
+margin-top: 100px;
+}
+
+.admis p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.regis{
+padding:15px 35px;
+background:#00bcd4;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.regis:hover{
+background:#008c9e;
+}
+
+/* Information */
+
+.form-sect{
+padding:50px 20px;
+text-align:center;
+}
+
+.form-sect h1{
+color:blue;
+margin-bottom:20px;
+}
+
+.form-sect p{
+margin:10px 0;
+font-size:18px;
+}
+
+/* Form */
+
+#form{
+
+width:95%;
+max-width:650px;
+
+margin:40px auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 0 20px rgba(0,0,0,.15);
+
+}
+
+#form label{
+
+display:block;
+
+margin-top:15px;
+
+font-weight:bold;
+
+}
+
+#form input[type=text],
+#form input[type=number],
+#form input[type=tel],
+#form input[type=file]{
+
+width:100%;
+
+padding:12px;
+
+margin-top:8px;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+}
+
+.gender{
+
+margin-top:10px;
+
+}
+
+.gender input{
+
+margin-left:20px;
+
+}
+
+#form button{
+
+width:100%;
+
+padding:15px;
+
+margin-top:25px;
+
+background:blue;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#form button:hover{
+
+background:#003cb3;
+
+}
+
+/* After Admission */
+
+.already{
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#eef5ff;
+
+}
+
+.already h1{
+
+margin-bottom:20px;
+
+color:blue;
+
+}
+
+/* Footer */
+
+.footer{
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+padding:40px 20px;
+
+}
+
+.footer h2{
+
+margin-bottom:10px;
+
+}
+
+.footer h3{
+
+margin-bottom:15px;
+
+}
+
+.foot{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin:20px 0;
+
+}
+
+.foot a{
+
+display:inline-block;
+
+background:white;
+
+padding:10px;
+
+border-radius:50%;
+
+transition:.3s;
+
+}
+
+.foot a:hover{
+
+transform:scale(1.1);
+
+background:#00bcd4;
+
+}
+
+@media(max-width:768px){
+
+.admin-tit{
+
+font-size:30px;
+
+}
+
+.admis p{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="admis">
+
+<h1 class="admin-tit">
+Admissions for 2026/2027
+</h1>
+
+<p>
+Join Prince of Peace Bilingual Nursery and Primary School.
+</p>
+
+<button class="regis" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
+
+Apply Now
+
+</button>
+
+</div>
+
+<section class="form-sect">
+
+<h1>Online Admission Process</h1>
+
+<p>Complete the application form below.</p>
+
+<p>Upload your child's passport-size photograph.</p>
+
+<p>Click <strong>Submit Application</strong>.</p>
+
+<p>Your child's space will be reserved after successful submission.</p>
+
+</section>
+
+<form
+id="form"
+action="addmission.php"
+method="POST"
+enctype="multipart/form-data">
+
+<label>Child's Photo</label>
+
+<input
+type="file"
+name="child_pic"
+accept=".jpg,.jpeg,.png,.webp"
+required>
+
+<label>Gender</label>
+
+<div class="gender">
+
+<input
+type="radio"
+name="Gender"
+value="Male"
+checked>
+
+Male
+
+<input
+type="radio"
+name="Gender"
+value="Female">
+
+Female
+
+</div>
+
+<label>Child's Full Name</label>
+
+<input
+type="text"
+name="childs_name"
+required>
+
+<label>Age</label>
+
+<input
+type="number"
+name="childs_DOB"
+required>
+
+<label>Class</label>
+
+<input
+type="text"
+name="childs_class"
+required>
+
+<label>Parent's Name</label>
+
+<input
+type="text"
+name="parents_name"
+required>
+
+<label>Parent's Phone</label>
+
+<input
+type="text"
+name="parents_phone"
+required>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+</form>
+
+<section class="already">
+
+<h1>Next Step</h1>
+
+<p>
+
+Visit Prince of Peace Bilingual Nursery and Primary School located between Azeri New Church and Old Church.
+
+</p>
+
+<p>
+
+Bring the first installment of school fees to complete your child's registration.
+
+</p>
+
+</section>
+
+<footer class="footer">
+
+<h2>Prince of Peace</h2>
+
+<h3>Bamenda, Cameroon</h3>
+
+<p>
+
+Telephone:
+
++237 678496554
+
+|
+
++237 674785253
+
+</p>
+
+<div class="foot">
+<!--
+<a href="#"><img src="images/facebook.png" width="30"></a>
+
+<a href="#"><img src="images/youTube.png" width="30"></a>
+
+<a href="#"><img src="images/TikTok.png" width="30"></a>
+-->
+<a href="#"><img src="images/whatsapp.png" width="30"></a>
+
+</div>
+
+<p>
+
+© 2026 PrinceOfPeace.com | All Rights Reserved
+
+</p>
+
+</footer>
+
+</body>
+</html>
